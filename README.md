@@ -1,2 +1,3 @@
 # reporsitory
-codee
+codee of 30 days of js
+
