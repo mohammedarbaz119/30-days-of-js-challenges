@@ -576,3 +576,97 @@ let pa = /\d+/g;
 let pc = y.match(pa);
 console.log(pc)
 console.log('arbaz')
+paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+let patte = /[A-Z][a-z]*/gi
+const puchet = paragraph.match(patte);
+console.log(puchet)
+let aad = new Set(puchet);
+let ccregex = []
+for (const p of aad) {
+    const acha = puchet.filter(l => l === p)
+    ccregex.push({ language: p, count: acha.length })
+
+}
+
+ccregex.sort((a, b) => {
+    return b.count - a.count
+})
+console.log(ccregex);
+sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+const claear = sentence.replace(/%|@|&|[$]|#/g, '');
+console.log(claear)
+const clear = claear.match(/[A-z][a-z]*/gi)
+console.log(clear)
+
+let aaad = new Set(clear);
+console.log(aaad)
+let ccrege = []
+for (const p of aaad) {
+    const acha = clear.filter(l => l === p)
+    ccrege.push({ language: p, count: acha.length })
+
+}
+
+ccrege.sort((a, b) => {
+    return b.count - a.count
+})
+console.log(ccrege[0], ccrege[1], ccrege[3])
+const names = ['Asabeneh', 'Brook', 'David', 'John']
+const countriess = [
+    ['Finland', 'Helsinki'],
+    ['Sweden', 'Stockholm'],
+    ['Norway', 'Oslo']
+]
+const udaser = {
+    name: 'Asabeneh',
+    title: 'Programmer',
+    country: 'Finland',
+    city: 'Helsinki',
+    age: 250
+}
+const users = [
+    {
+        name: 'Asabeneh',
+        title: 'Programmer',
+        country: 'Finland',
+        city: 'Helsinki',
+        age: 250
+    },
+    {
+        name: 'Eyob',
+        title: 'Teacher',
+        country: 'Sweden',
+        city: 'London',
+        age: 25
+    },
+    {
+        name: 'Asab',
+        title: 'Instructor',
+        country: 'Norway',
+        city: 'Oslo',
+        age: 22
+    },
+    {
+        name: 'Matias',
+        title: 'Developer',
+        country: 'Denmark',
+        city: 'Copenhagen',
+        age: 28
+    }
+]
+
+console.table(countriess)
+console.table(countries)
+console.group('pcuhet is puchet')
+console.log(names)
+console.groupEnd()
+console.assert(10 > 2 * 10, 'no this is wrong')
+console.warn('i am warning')
+console.error('arrey')
+console.time('how fast i am')
+names.forEach(l => console.log(l))
+console.timeEnd('how fast i am')
+let cv = "arbaz uddin ewqwgyegfyewgfhb 2019   2020 vefywebfywegfy mail email e-mail emailaevew vwjfnwbwbf E-mail Email ee-mail"
+let par = /\b\w{4}\b/gi
+let asad = cv.match(par)
+console.log(asad)

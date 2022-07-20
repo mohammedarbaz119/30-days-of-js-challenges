@@ -106,5 +106,39 @@ const obj = {
 }
 obj.name = "ujji"
 console.log(obj)
+const cff = new Date()
+cff.setFullYear(2070)
+console.log(cff.getTime())
+const dada = new Date()
+const daR = dada.getFullYear()
+const dam = dada.getMonth() + 1
+const dad = dada.getDate()
+const dah = dada.getHours()
+const das = dada.getMinutes()
+if (dam < 10) {
+    damm = `0${dam}`
+
+}
+else {
+    damm = `${dam}`
+}
+if (dad < 10) {
+    dadd = `0${dad}`
+
+}
+else {
+    dadd = `${dad}`
+}
+const puchee = `${daR}-${damm}-${dadd} ${dah}:${das}`
+console.log(puchee)
+console.log(
+    '%c30 Days%c %cOf%c %cJavaScript',
+    'color:green',
+    '',
+    'color:red',
+    '',
+    'color:yellow'
+)
+
 
 
