@@ -611,7 +611,7 @@ ccrege.sort((a, b) => {
     return b.count - a.count
 })
 console.log(ccrege[0], ccrege[1], ccrege[3])
-const names = ['Asabeneh', 'Brook', 'David', 'John']
+const namess = ['Asabeneh', 'Brook', 'David', 'John']
 const countriess = [
     ['Finland', 'Helsinki'],
     ['Sweden', 'Stockholm'],
@@ -624,7 +624,7 @@ const udaser = {
     city: 'Helsinki',
     age: 250
 }
-const users = [
+const userss = [
     {
         name: 'Asabeneh',
         title: 'Programmer',
@@ -658,7 +658,7 @@ const users = [
 console.table(countriess)
 console.table(countries)
 console.group('pcuhet is puchet')
-console.log(names)
+console.log(namess)
 console.groupEnd()
 console.assert(10 > 2 * 10, 'no this is wrong')
 console.warn('i am warning')
@@ -670,3 +670,60 @@ let cv = "arbaz uddin ewqwgyegfyewgfhb 2019   2020 vefywebfywegfy mail email e-m
 let par = /\b\w{4}\b/gi
 let asad = cv.match(par)
 console.log(asad)
+const aada = () => {
+    try {
+        let a = prompt("enter a floating numer : ")
+        if (isNaN(a)) throw "not a number"
+        b = parseInt(a)
+        console.log(b)
+        if (b > 200) {
+            throw "high"
+        }
+    } catch (error) {
+        alert(error)
+    }
+}
+//aada()
+try {
+    let fn = "mohammed"
+    console.log(fn + " " + ln)
+} catch (error) {
+    console.log(error.name)
+    console.log(error.message)
+}
+// let dds = 234
+// if (dds > 230) {
+//     throw new Error("name:greater than 230 error")
+// }
+class Person {
+    constructor(name, age, pro) {
+        this.name = name
+        this.age = age
+        this.pro = pro
+    }
+    details = () => {
+        console.log(`hello tbhis person is ${this.name} his/her age is ${this.age} and his/her pro is ${this.pro}`)
+    }
+}
+const person1 = new Person("mehveen fatima", 20, "CSE")
+person1.details()
+const newdate = new Date()
+newdate.setFullYear(newdate.getFullYear() + 100)
+console.log(newdate)
+console.log(newdate.getTime() - new Date().getTime())
+class sds {
+    constructor(name = "arbaz", clas = "cse b") {
+        this.name = name
+        this.clas = clas
+
+    }
+
+}
+const dsds = new sds()
+console.log(dsds)
+
+
+
+
+
+
