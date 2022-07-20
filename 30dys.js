@@ -575,3 +575,4 @@ let y = "He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500
 let pa = /\d+/g;
 let pc = y.match(pa);
 console.log(pc)
+console.log('arbaz')
