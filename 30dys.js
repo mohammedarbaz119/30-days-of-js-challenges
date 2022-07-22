@@ -721,7 +721,54 @@ class sds {
 }
 const dsds = new sds()
 console.log(dsds)
+lusers.signin = (username, password) => {
+    let b = false;
+    lusers.forEach(l => {
+        if (l.username === username && l.password === password) {
+            b = true
+        }
+    })
+    if (b === true) {
+        console.log("sign in suceesful")
+    } else {
+        console.log("invalid")
+    }
+}
+lusers.signin('Martha', '123222')
+const rate = (user, name, rate) => {
+    products.forEach(l => {
+        if (l.name.includes(name)) {
+            l.ratings.push({ userId: user, rate: rate })
+        }
+    })
+}
+rate("arbaz", "Laptop", 5)
+console.log(products)
+const rand = () => {
+    nofid = parseInt(prompt("enter a no of ids: "))
+    lenofid = parseInt(prompt("enter len of ids: "))
+    let r = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+    for (let index = 0; index < nofid; index++) {
+        let d = []
+        for (let i = 0; i < lenofid; i++) {
+            d.push(r.charAt(Math.floor(Math.random() * r.length)))
 
+        }
+        console.log(d.join(''))
+
+    }
+}
+rand()
+let pattt = /^[A-Za-z_]\\w*/
+const checker = (str) => {
+    if (pattt.test(str)) {
+        console.log("validf name")
+    }
+    else {
+        console.log("not avlid name")
+    }
+}
+checker("chec-ker")
 
 
 
