@@ -769,6 +769,54 @@ const checker = (str) => {
     }
 }
 checker("chec-ker")
+class news {
+    constructor(name, age, color, legs) {
+        this.name = name
+        this.age = age
+        this.color = color
+        this.legs = legs
+        this.skills = []
+        this.score = 0
+
+    }
+    set sskill(skill) {
+        this.skills.push(skill)
+    }
+    set sscore(score) {
+        this.score += score
+    }
+    get getscore() {
+        return this.score
+
+    }
+    get getskill() {
+        return this.skills
+
+    }
+    animalsounds() {
+        console.log(`${this.name} is good`)
+    }
+
+}
+let cat = new news("puchi", 2, "red", "tall")
+cat.sscore = 20
+cat.sskill = "html"
+console.log(cat)
+class cats extends news {
+    constructor(name, age, color, legs, gender) {
+        super(name, age, color, legs)
+        this.gender = gender
+    }
+    meow() {
+        console.log("mewoww22")
+    }
+
+}
+let catss = new cats("puchi", 2, "black", "short", "male")
+catss.sscore = 20
+catss.sskill = "css"
+console.log(catss)
+
 
 
 
