@@ -344,11 +344,13 @@ const countries = [
 console.log(f(countries))*/
 const crte = (arr, n) => {
     const ob = arr.reduce((ele, { languages }) => {
+
         languages.forEach(element => {
             ele[element] = (ele[element] || 0) + 1
         });
         return ele
     }, {})
+
     return Object.keys(ob).map(countries => ({ countries, count: ob[countries] })).sort((a, b) => {
         if (a.count > b.count) return -1
         if (a.count < b.count) return 1
@@ -743,22 +745,22 @@ const rate = (user, name, rate) => {
     })
 }
 rate("arbaz", "Laptop", 5)
-console.log(products)
-const rand = () => {
-    nofid = parseInt(prompt("enter a no of ids: "))
-    lenofid = parseInt(prompt("enter len of ids: "))
-    let r = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
-    for (let index = 0; index < nofid; index++) {
-        let d = []
-        for (let i = 0; i < lenofid; i++) {
-            d.push(r.charAt(Math.floor(Math.random() * r.length)))
+// console.log(products)
+// const rand = () => {
+//     nofid = parseInt(prompt("enter a no of ids: "))
+//     lenofid = parseInt(prompt("enter len of ids: "))
+//     let r = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+//     for (let index = 0; index < nofid; index++) {
+//         let d = []
+//         for (let i = 0; i < lenofid; i++) {
+//             d.push(r.charAt(Math.floor(Math.random() * r.length)))
 
-        }
-        console.log(d.join(''))
+//         }
+//         console.log(d.join(''))
 
-    }
-}
-rand()
+//     }
+// }
+// rand()
 let pattt = /^[A-Za-z_]\\w*/
 const checker = (str) => {
     if (pattt.test(str)) {
@@ -810,16 +812,248 @@ class cats extends news {
     meow() {
         console.log("mewoww22")
     }
+    static mewoew() {
+        console.log(`mew0 is a good score`)
+    }
 
 }
 let catss = new cats("puchi", 2, "black", "short", "male")
 catss.sscore = 20
 catss.sskill = "css"
 console.log(catss)
+cats.mewoew()
+class dog extends news {
+    constructor(name, age, color, legs, gender, height) {
+        super(name, age, color, legs)
+        this.gender = gender
+        this.height = height
+        this.sound = "woof woof"
+    }
+    animalsounds() {
+        console.log(`dog makes ${this.sound} sound`)
+    }
+}
+let dog1 = new dog("newdod", 2, "red", "tall", "male", 120)
+dog1.animalsounds()
+let agess = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+class statistics {
 
+    static mean(arr) {
+        let t = arr.reduce((l, c) => l + c, 0)
+        let avg = t / arr.length
+        return avg
+    }
+    static sum(arr) {
+        let s = arr.reduce((l, c) => l + c, 0)
+        return s
+    }
+    static min(arr) {
+        return Math.min(...arr)
+    }
+    static count(arr) {
+        let c = 0
+        arr.forEach(l => c++)
+        console.log(c)
+    }
+    static mode(arr) {
+        let ar = []
+        let s = new Set(arr)
+        console.log(s)
+        for (const p of s) {
+            let c = arr.filter(l => l === p)
+            ar.push({ 'mode': p, 'count': c.length })
 
+        }
+        return ar.sort((a, b) => b.count - a.count)[0]
+    }
 
+}
+console.log(statistics.mean(agess))
+console.log(statistics.sum(agess))
+console.log(statistics.min(agess))
+statistics.count(agess)
+console.log(statistics.mode(agess))
+console.log(countries.filter(l => l.name.length > 6))
+console.log(countries.filter(l => l.name.startsWith('A')))
+let productss = product.map(l => {
+    if (l.price === '') {
+        l.price = 0
+    }
+    else {
+        l.price = Number(l.price)
+    }
+    return { prices: l.price }
+})
+console.log(productss)
+// console.log(productss.filter(l => l.price))
+let str = countrie.reduce((l, c, s) => {
+    if (s == countrie.length - 1) {
+        return l.concat(" and ", c, " are icalend countries")
+    }
+    return l.concat(',', c)
 
+}
+)
+console.log(str)
+console.log(countrie.some(l => l.length >= 7))
+console.log(agess.findIndex(el => el > 7))
+console.log(countrie.find(e => e.length > 6))
+console.log(countrie.findIndex(e => e === "Finland"))
+let prices = product.map(l => l.price).filter(l => l > 0).reduce((l, s) => l + s, 0)
+console.log(prices)
+const mostspeaken = arr => {
+    const ob = arr.reduce((ele, { languages }) => {
+        languages.forEach(l => {
+            ele[l] = (ele[l] || 0) + 1
 
-
-
+        })
+        return ele
+    }, {})
+    return Object.keys(ob)
+}
+console.log(mostspeaken(countries))
+// day 16 json
+const usersText = `{
+    "users":[
+      {
+        "firstName":"Asabeneh",
+        "lastName":"Yetayeh",
+        "age":250,
+        "email":"asab@asb.com"
+      },
+      {
+        "firstName":"Alex",
+        "lastName":"James",
+        "age":25,
+        "email":"alex@alex.com"
+      },
+      {
+      "firstName":"Lidiya",
+      "lastName":"Tekle",
+      "age":28,
+      "email":"lidiya@lidiya.com"
+      }
+    ]
+    }`
+const userobj = JSON.parse(usersText, (key, value) => {
+    let newv = typeof value == 'string' && key != 'email' ? value.toUpperCase() : value
+    return newv
+})
+console.log(userobj)
+const skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python']
+let age = 250;
+let isMarried = true
+const studentsss = {
+    firstName: 'Asabeneh',
+    lastName: 'Yetayehe',
+    age: 250,
+    isMarried: true,
+    skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python',]
+}
+const txt = `{
+    "Alex": {
+        "email": "alex@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
+    },
+    "Asab": {
+        "email": "asab@asab.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
+    },
+    "Brook": {
+        "email": "daniel@daniel.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Daniel": {
+        "email": "daniel@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "John": {
+        "email": "john@john.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Thomas": {
+        "email": "thomas@thomas.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "Paul": {
+        "email": "paul@paul.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    }
+}
+`
+const arrr = JSON.stringify(skills)
+console.log(arrr)
+const newage = JSON.stringify(age)
+console.log(newage)
+const nisMarried = JSON.stringify(isMarried, undefined, 4)
+console.log(isMarried)
+const studd = JSON.stringify(studentsss, ['firstName', 'lastName', 'skills'])
+console.log(studd)
+// const newtxt = JSON.parse(txt,(key,value)
+// )
+// console.log(newtxt)
