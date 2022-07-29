@@ -1211,3 +1211,67 @@ const languagescount = async () => {
     }
 }
 languagescount()
+// day 19
+// closures
+function newfunc() {
+    let count = 0
+    console.log(count)
+    function innerfunc() {
+        count++
+        return count
+    }
+    return innerfunc
+}
+const newwfunc = newfunc()
+console.log(newwfunc())
+console.log(newwfunc())
+console.log(newwfunc())
+function three() {
+    let count = 2
+    let multifatcor = 2
+    function add() {
+        return count + multifatcor
+    }
+    function multiply() {
+        return count * multifatcor
+    }
+    function power() {
+        return count ** multifatcor
+    }
+    return {
+        add: add(),
+        multliply: multiply(),
+        pow: power()
+    }
+}
+console.log(three())
+//day 20 nothing
+//day 21
+setInterval(() => {
+    const dada = new Date()
+    const daR = dada.getFullYear()
+    const dam = dada.getMonth() + 1
+    const dad = dada.getDate()
+    const dah = dada.getHours()
+    const das = dada.getMinutes()
+    const dass = dada.getSeconds()
+    if (dam < 10) {
+        damm = `0${dam}`
+
+    }
+    else {
+        damm = `${dam}`
+    }
+    if (dad < 10) {
+        dadd = `0${dad}`
+
+    }
+    else {
+        dadd = `${dad}`
+    }
+    if (dass < 10) {
+        dass = `0${dass}`
+    }
+    const puchee = `${daR}-${damm}-${dadd} ${dah}:${das}:${dass}`
+    document.getElementById("m").innerHTML = puchee
+}, 1000)
