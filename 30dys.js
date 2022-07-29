@@ -1089,3 +1089,125 @@ let personaccount = {
     }
 }
 personaccount.totalincome()
+//day18
+const newss = callback => {
+    const skilss = ['neskil', 'skisls']
+    setTimeout(() => {
+        callback(false, skilss)
+    }, 2000)
+}
+function callback(err, result) {
+    if (err) {
+        console.log(err)
+    }
+    else {
+        console.log(result)
+    }
+}
+
+newss(callback)
+const p = new Promise((resolve, reject) => {
+    const goals = ['new', 'goal', 'calss', "class"]
+    if (goals.findIndex(l => l === "class") == -1) {
+        resolve("class is not there")
+    }
+    else {
+        reject("calss and class should not be present together")
+    }
+})
+p.then(message => {
+    console.log(message)
+}).catch(err => {
+    console.error(err)
+})
+const url = 'https://restcountries.com/v2/all' // countries api
+fetch(url)
+    .then(response => response.json()) // accessing the API data as JSON
+    .then(data => {
+        // getting the data
+        console.log(data)
+    })
+    .catch(error => console.error(error)) // handling error if something wrong happens
+//async returns a promise and await is to grab the promise
+//async aand await can be usedd in try catch
+//async and await
+
+
+// const square = async (n) => {
+//     return n * n
+// }
+// console.log(square(2))
+
+
+
+
+// const readnameofcountry = async () => {
+//     try {
+//         const response = await fetch(url)
+//         const countr = await response.json()
+//         for (const { name, capital, population, languages, area } of countr) {
+//             console.log({ name, capital, population, languages, area })
+//         }
+//     }
+//     catch (err) {
+//         console.error(err)
+//     }
+// }
+// readnameofcountry()
+
+const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+let newcat = []
+fetch(catsAPI)
+    .then(res => res.json())
+    .then(data => {
+
+        data.forEach(d => {
+            newcat.push(d);
+        })
+    })
+    .catch(err => {
+        console.error(err)
+    })
+
+
+
+// for (const { name } in newcat) {
+//     console.log(name)
+// }
+console.log(newcat)
+const consttenlargestcountries = async () => {
+    try {
+        const res = await fetch(url)
+        const countr = await res.json()
+        let newar = []
+        for (const { name, population } of countr) {
+            newar.push({ name, population })
+        }
+
+        console.log(newar.sort((a, b) => { return b.population - a.population }).slice(0, 10))
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
+consttenlargestcountries()
+
+const languagescount = async () => {
+
+    try {
+        const res = await fetch(url)
+        const countr = await res.json()
+        let a = new Set()
+        console.log(countr)
+        for (const { languages } of countr) {
+            languages.forEach(l => {
+                if (!a.has(l.name))
+                    a.add(l.name)
+            })
+        }
+        console.log(a.size)
+    } catch (err) {
+        console.log(err)
+    }
+}
+languagescount()
