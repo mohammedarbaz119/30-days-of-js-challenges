@@ -1054,6 +1054,38 @@ const nisMarried = JSON.stringify(isMarried, undefined, 4)
 console.log(isMarried)
 const studd = JSON.stringify(studentsss, ['firstName', 'lastName', 'skills'])
 console.log(studd)
-// const newtxt = JSON.parse(txt,(key,value)
-// )
-// console.log(newtxt)
+let newtxt = JSON.parse(txt, ["skills"])
+console.log(newtxt)
+//day 17
+localStorage.setItem("age", age)
+localStorage.setItem("skilss", skills)
+console.log(localStorage.getItem("skilss"))
+console.log(localStorage.getItem("age"))
+let domain = [
+    { tech: 'HTML', level: 10 },
+    { tech: 'CSS', level: 9 },
+    { tech: 'JS', level: 8 },
+    { tech: 'React', level: 9 },
+    { tech: 'Redux', level: 10 },
+    { tech: 'Node', level: 8 },
+    { tech: 'MongoDB', level: 8 }
+]
+localStorage.setItem("skilsss", JSON.stringify(domain))
+let newarr = JSON.parse(localStorage.getItem("skilsss"))
+console.log(newarr)
+let personaccount = {
+    fn: "yes",
+    ln: "ls",
+    inc: {
+        pas: 100,
+        ac: 211
+    },
+    exp: {
+        ho: 50,
+        oth: 30
+    },
+    totalincome() {
+        console.log(this.inc.ac + this.inc.pas)
+    }
+}
+personaccount.totalincome()
