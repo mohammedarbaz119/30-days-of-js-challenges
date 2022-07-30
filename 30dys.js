@@ -1052,9 +1052,10 @@ const newage = JSON.stringify(age)
 console.log(newage)
 const nisMarried = JSON.stringify(isMarried, undefined, 4)
 console.log(isMarried)
+
 const studd = JSON.stringify(studentsss, ['firstName', 'lastName', 'skills'])
 console.log(studd)
-let newtxt = JSON.parse(txt, ["skills"])
+let newtxt = JSON.parse(txt)
 console.log(newtxt)
 //day 17
 localStorage.setItem("age", age)
@@ -1248,13 +1249,13 @@ console.log(three())
 //day 20 nothing
 //day 21
 setInterval(() => {
-    const dada = new Date()
-    const daR = dada.getFullYear()
-    const dam = dada.getMonth() + 1
-    const dad = dada.getDate()
-    const dah = dada.getHours()
-    const das = dada.getMinutes()
-    const dass = dada.getSeconds()
+    let dada = new Date()
+    let daR = dada.getFullYear()
+    let dam = dada.getMonth() + 1
+    let dad = dada.getDate()
+    let dah = dada.getHours()
+    let das = dada.getMinutes()
+    let dass = dada.getSeconds()
     if (dam < 10) {
         damm = `0${dam}`
 
@@ -1271,6 +1272,9 @@ setInterval(() => {
     }
     if (dass < 10) {
         dass = `0${dass}`
+    }
+    if (dah < 10) {
+        dah = `0${dah}`
     }
     const puchee = `${daR}-${damm}-${dadd} ${dah}:${das}:${dass}`
     document.getElementById("m").innerHTML = puchee
