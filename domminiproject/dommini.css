@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    text-align: center;
+}
+
+ul {
+    transform: translateX(20%);
+}
+
+ul li {
+    width: 50%;
+    height: 5vh;
+    margin: 5px;
+}
+
+.center {
+    transform: translateX(45%);
+    width: 50%;
+    height: 5vh;
+    font-size: 30px;
+}
+
+span {
+    font-size: 80px;
+}
