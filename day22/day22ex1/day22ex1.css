@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.cc {
+    height: auto;
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+}
+
+.c {
+    height: 100px;
+    width: 150px;
+    margin: 5px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
