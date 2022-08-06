@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.cc {
+
+    height: auto;
+    width: 63vw;
+    border: 2px solid black;
+    margin: 0 auto;
+    transform: translateY(50px);
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+h1,
+h4 {
+    text-align: center;
+}
+
+
+
+.d {
+    display: inline-block;
+    box-shadow: 5px 5px 1px -5px black;
+    height: 100px;
+    width: 150px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
