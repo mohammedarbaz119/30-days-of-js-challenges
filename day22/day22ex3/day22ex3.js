@@ -93,8 +93,10 @@ icons.forEach(l => {
 
     let a = document.createElement('a')
     a.href = l.url
-    a.innerHTML = l.fontawesomeIcon
+    a.className = 'fa fa-instagram'
+    // a.innerHTML = l.fontawesomeIcon
     a.style.fontSize = '50px'
+    a.style.padding = '10px'
     wrap.append(a)
 
 })
@@ -104,3 +106,45 @@ bio.style.textAlign = 'center'
 bio.style.width = '50vw'
 wrap.append(bio)
 let info = document.createElement('div')
+let titdiv = document.createElement('div')
+let titles = document.createElement('ul')
+
+achallenges.author.titles.forEach((l) => {
+    let tit = document.createElement('li')
+    tit.style.listStyle = 'none'
+    let titi = document.createElement('span')
+    titi.innerHTML = l[0]
+    tit.append(titi)
+    tit.append(` ${l[1]}`)
+    tit.style.width = 'auto'
+    tit.style.color = "black"
+    titles.append(tit)
+})
+titdiv.className = 't'
+titdiv.append(titles)
+info.append(titdiv)
+wrap.append(info)
+let a = Object.keys(achallenges).filter((l) => {
+    return l === 'keywords'
+})
+console.log(a[0])
+let h11 = document.createElement('h1')
+h11.innerHTML = a[0]
+
+wrap.append(h11)
+h11.style.transform = 'translateX(-25%)'
+h11.style.fontSize = '50px'
+let divk = document.createElement('div')
+achallenges.keywords.forEach((l) => {
+    let div = document.createElement('div')
+    div.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`
+    div.innerHTML = `#${l}`
+    div.style.fontSize = '35px'
+    div.style.borderRadius = '15px'
+    div.style.margin = '5px'
+    div.style.width = 'fit-content'
+    divk.appendChild(div)
+
+})
+divk.classList.add('t')
+wrap.append(divk)

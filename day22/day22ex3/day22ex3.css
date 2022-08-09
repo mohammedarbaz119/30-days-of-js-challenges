@@ -24,3 +24,21 @@
 p {
     transform: translateX(50%);
 }
+
+.t {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    height: auto;
+    transform: translateX(20%);
+
+}
+
+ul li {
+
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    display: block;
+
+}
