@@ -11,6 +11,7 @@ console.log(a.length)
 console.log(a[0])
 let m = (a.length - 1) / 2;
 console.log(a[m])
+
 a.forEach(element => {
     console.log(element.toUpperCase());
 });
@@ -139,6 +140,6 @@ console.log(
     '',
     'color:yellow'
 )
-
-
+let ac = 23
+console.log(typeof ac)
 

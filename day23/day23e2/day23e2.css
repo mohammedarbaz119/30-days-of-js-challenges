@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+
+}
+
+.keyp {
+    height: auto;
+    width: max-content;
+    padding: 25px;
+    box-shadow: 10px 5px 10px 1px rgb(0, 0, 0);
+
+    font-size: 50px;
+    transform: translate(500px, 250px);
+}
+
+.any {
+    height: 150px;
+    width: 170px;
+    box-shadow: 10px 5px 10px 1px rgb(0, 0, 0);
+    color: green;
+    font-size: 60px;
+    transform: translate(550px, 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
