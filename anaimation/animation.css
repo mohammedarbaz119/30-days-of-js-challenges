@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+.wrap{
+    height: 90vh;
+    width: 80vw;
+    border: 1px solid black;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
