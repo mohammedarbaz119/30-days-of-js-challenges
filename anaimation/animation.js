@@ -39,9 +39,9 @@ setInterval(()=>{
     sp.forEach(l=>{
         l.style.opacity=`${o}`
     })
-    o+=0.1
+    o+=0.10
     console.log(o)
-    if(o>1){
+    if(o>=1){
         o=0
     }
 },200)
