@@ -35,4 +35,5 @@ c.forEach((t, i) => {
     i % 2 == 0 ? t.textContent = "red" : t.textContent = "blue"
 })
 
-
+let a =[1,2,3,3,4]
+p2.textContent=a

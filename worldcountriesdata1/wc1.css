@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+#countries{
+    text-align: center;
+}
+header{
+    border-bottom:2px solid brown;
+}
+#countries h2{
+    font-size: 60px;
+    color: orange;
+    margin-bottom: 0;
+    
+}
+.graphbuttons{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-bottom: 1px solid black;
+}
+.population{
+    margin-right: 20px;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+   
+}
+.languages{
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+h4{
+    font-size: 20px;
+    text-align: center;
+    transform: translateY(-50px);
+    background-color: white;
+}
+#stat{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+   
+   margin: 0 auto;
+   transform: translateY(-10px);
+}
+.graphout{
+    height:50px;
+    width: 40vw;
+   
+}
+.out{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding-left: 30px;
+}
