@@ -6,15 +6,22 @@ genra.after(p)
 ins.addEventListener('blur', () => {
 
 
-    if (!parseInt(ins.value)) {
+    let n = ins.value
+    let pa = /[a-zA-z]/
+    if(pa.test(n)){
 
         p.style.color = "red"
         p.style.fontSize = '25px'
         genra.disabled = true
 
         p.textContent = 'not a number'
-    }
+    
     w.innerHTML = ''
+    }
+    else{
+        genra.disabled=false
+        p.textContent=''
+    }
 })
 
 genra.addEventListener("click", () => {
