@@ -32,7 +32,7 @@ add.addEventListener("click",()=>{
         wrap.removeChild(rembut.parentNode)
     })
 })
-
+console.log(window.outerWidth,window.innerWidth)
 
 
 
