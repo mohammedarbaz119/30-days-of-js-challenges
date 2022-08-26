@@ -68,6 +68,7 @@ planetdescription.classList.add('description')
 pimage.removeChild(planetimage)
     }
  else{
+    planetdescription.textContent=''
 pimage.append(planetimage)
 planetimage.setAttribute('src',space[select.value.toLowerCase()].image)
 planetdescription.classList.add('description')
