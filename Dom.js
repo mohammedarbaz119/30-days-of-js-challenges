@@ -37,3 +37,6 @@ c.forEach((t, i) => {
 
 let a =[1,2,3,3,4]
 p2.textContent=a
+document.addEventListener("keypress",(e)=>{
+    p.textContent+=e.key
+})

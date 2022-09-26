@@ -9,9 +9,10 @@ console.log("\"my name is arbaz i isn\'t puchi is nfeghe \"")
 let a = ["a", "b", "c", "d"]
 console.log(a.length)
 console.log(a[0])
-let m = (a.length - 1) / 2;
+let m = Math.round((a.length - 1) / 2);
+console.log(m)
 console.log(a[m])
-
+console.log(a.includes("a"))
 a.forEach(element => {
     console.log(element.toUpperCase());
 });

@@ -1176,10 +1176,12 @@ fetch(catsAPI)
 //     console.log(name)
 // }
 console.log(newcat)
+var newww=[];
 const consttenlargestcountries = async () => {
     try {
         const res = await fetch(url)
-        const countr = await res.json()
+        let countr = await res.json()
+        newww.push(...countr)
         let newar = []
         for (const { name, population } of countr) {
             newar.push({ name, population })
@@ -1192,7 +1194,7 @@ const consttenlargestcountries = async () => {
     }
 }
 consttenlargestcountries()
-
+console.log(newww)
 const languagescount = async () => {
 
     try {

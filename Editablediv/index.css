@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+.new{
+    border: 1px solid black;
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+}
+ input{
+  background-color: red;
+    border: none;
+}
+/* input:focus{
+    border: 1px solid black;
+} */
