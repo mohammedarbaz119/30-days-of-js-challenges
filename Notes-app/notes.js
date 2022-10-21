@@ -23,8 +23,16 @@ submit_button.addEventListener('click',(e)=>{
     let addnote = {"title":title.value,"detail":note.value}
     allnotes.push(addnote)
     localStorage.setItem("notes",JSON.stringify(allnotes))
+    
     shownotes();
+    alert("note added")
 })
+
+
+
+
+
+//show notes
 function shownotes(){
     let allnotes = JSON.parse(localStorage.getItem("notes"))
     if(allnotes===null || allnotes.length<=0){
@@ -42,7 +50,7 @@ function shownotes(){
        title_element.textContent=l.title
        //add details
         let details = document.createElement('p')
-details.textContent=l.detail
+        details.textContent=l.detail
         //add delete button
         let delete_button =document.createElement('button')
         delete_button.textContent="delete note"
@@ -95,6 +103,7 @@ edit_outer_button.addEventListener('click',(e)=>{
    Editnote(i)
 shownotes();
 
+
 })
 
         })
@@ -104,6 +113,13 @@ shownotes();
 }
 
 }
+
+
+
+
+
+
+//edit notes
 function Editnote(i){
     let allnotes=JSON.parse(localStorage.getItem("notes"))
     let edited_notes = allnotes.map((l,idx)=>{
@@ -120,7 +136,11 @@ function Editnote(i){
 title.value=''
 note.value=''
     localStorage.setItem("notes",JSON.stringify(edited_notes))
+
 }
+
+
+//deletenotes
 function deletenote(i){
     let allnotes = JSON.parse(localStorage.getItem("notes"))
     let newnotes = allnotes.filter((l,idx)=>i!==idx)
