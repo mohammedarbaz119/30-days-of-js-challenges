@@ -5,6 +5,7 @@ margin: 0;
 
 }
 body{
+  position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,16 +70,20 @@ translate: 100px;
     display: flex;
     flex-direction: column;
     width: 300px;
-    border: 1px solid grey;
     height: fit-content;
+    border: 1px solid grey;
     overflow-x: hidden;
 
 }
 .single-note h2{
     margin-bottom: 10px;
+    overflow-wrap: break-word;
+    
 }
 .single-note p{
     margin-bottom: 10px;
+    overflow-wrap: break-word;
+    
 }
 .single-note .delete{
     background-color: red;
@@ -89,7 +94,7 @@ translate: 100px;
     width: 100px;
     margin-right: 10px;
 }
-.edit{
+.edits{
 background-color: blue;
 border: 1px solid blue;
 color: white;
@@ -99,7 +104,6 @@ width: 100px;
 
 }
 .edit-outer{
-    display: none;
     margin-top: 10px;
     width: 120px;
     background-color: blue;
@@ -108,7 +112,7 @@ color: aliceblue;
 border-radius: 5px;
 height: 30px;
 font-size: 15px;
-translate: 100px;
+translate: 50px;
 }
 button:disabled{
     opacity: .7;
@@ -119,4 +123,45 @@ button:disabled{
 .no-note{
 
 display: none;
+}
+
+.note-edit{
+    margin-top: 10px;
+    width: 25vw;
+    font-size: 20px;
+    padding:5px;
+    border-radius: 5px;
+    text-decoration: none;
+height: 150px;
+}
+.title-text-edit{
+    width: 25vw;
+    height: 5vh;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.note-edit:focus{
+outline-color: blue;
+}
+.title-text-edit:focus{
+    outline-color: blue;
+}
+.edit-form{
+    position: absolute;
+    width: 450px;
+    height: 350px;
+    top: 36%;
+    left: 35%;
+    background-color:black;
+    border-radius: 10px;
+    color: wheat;
+    padding: 20px;
+    display: none;
+    z-index: 20;
+
+}
+.activ{
+    display: block;
 }
